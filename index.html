@@ -21,10 +21,21 @@
             let num1 = document.getElementById("f1").value;
             let num2 = document.getElementById("f2").value;
 
-            let final = [...num1,...num2];
-            let call = [...new Set(final)];
-            
-            document.getElementById("s1").innerHTML = `Merge Arrary without duplicates ${call}`;
+            let arr1 = num1.split(",");
+            let arr2 = num2.split(",");
+
+            let arr3 = arr1.concat(arr2);
+
+            let unique = [];
+
+            for (let i of arr3) {
+                if(unique.indexOf(i) === -1){
+                    console.log(unique);
+                    unique.push(i);
+                    
+                }
+            }
+            document.getElementById("s1").innerHTML = `Merge Array without duplicates ${unique}`;
         }
     </script>
 </body>
